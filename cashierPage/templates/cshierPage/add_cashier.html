@@ -1,0 +1,192 @@
+{% extends 'cshierPage/base.html' %}
+{% block content %}
+
+     
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                    <div>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                            <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Cashier</b></h4>
+                  <p class="card-description">
+                    Search by unique code or Name of product
+                  </p>
+                  <form action="\" method="POST">
+                    {% csrf_token %}
+                  <div class="form-group row">
+                    <div class="col">
+                      <label>Unique Code</label>
+                      <div id="the-basics">
+                        <input class="typeahead" type="text" placeholder="Unique Code">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Name</label>
+                      <div id="bloodhound">
+                        <input class="typeahead" type="text" placeholder="Name of Product">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="typeahead bg-primary p-2"><b class="text-white">Search</b></button>
+                </form>
+                </div>
+              </div>
+
+              <br><br>
+
+            <div class="col">
+              <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Product table</h4>
+                      <p class="card-description">
+                          if you're want to add that's product pelase click <b class="text-primary">.blue button</b>
+                          <br>
+                          if you're want to delete that's product pelase click <b class="text-danger">.red button</b>
+                      </p>
+                      <div class="table-responsive pt-3">
+                          <table class="table table-bordered">
+                              <thead>
+                                  <tr>
+                                      <th>
+                                          #
+                                      </th>
+                                      <th>
+                          Unique Code
+                      </th>
+                      <th>
+                          Product Name
+                      </th>
+                      <th>
+                          Deadline
+                      </th>
+                      <th>
+                          action
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  
+                  <tr>
+                      <td>
+                          1
+                      </td>
+                      <td>
+                          Herman Beck
+                      </td>
+                      <td>
+                          --
+                      </td>
+                      <td>
+                          $ 77.99
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary text-white">Add Product</button>
+                      </td>
+                  </tr>
+                  
+              </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+
+
+    {% comment %} ================================= {% endcomment %}
+<br><br>
+    
+    <div class="col">
+      <div class="card">
+          <div class="card-body bg-primary">
+              <h4 class="card-title text-white">Product costummer</h4>
+              <p class="card-description text-white">
+                  if you're want to delete that's product pelase click <b class="text-danger">.red button</b>
+              </p>
+              <div class="table-responsive pt-3">
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <table class="table table-bordered text-white">
+                      <thead>
+                          <tr>
+                              <th>
+                                  #
+                              </th>
+                              <th>
+                                  Unique Code
+                              </th>
+                              <th>
+                                  Product Name
+                              </th>
+                              <th>
+                                  Price
+                              </th>
+                              <th>
+                                  Quantity
+                              </th>
+                              <th>
+                                  Total
+                              </th>
+                              <th>
+                                  action
+                              </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          
+                          <tr>
+                              <td>
+                                  1
+                              </td>
+                              <td>
+                                <input class="typeahead bg-white p-2 " placeholder="Unique Code">  
+                              </td>
+                              <td>
+                                <input class="typeahead bg-white p-2 " placeholder="Product Name">  
+                              </td>
+                              <td>
+                                <input class="typeahead bg-white p-2 " placeholder="Price">  
+                              </td>
+                              <td>
+                                <input class="typeahead bg-white p-2 " placeholder="Quantity">  
+                              </td>
+                              <td>
+                                <input class="typeahead bg-white p-2 " placeholder="Total">  
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-danger text-white">Delete</button>
+                              </td>
+                          </tr>
+                          
+                      </tbody>
+                  </table>
+                  <br>
+                  <div>
+                    <label class="p-2 text-white"><b>Total Price</b></label>
+                      <input class="typeahead bg-white p-2 " placeholder="Total">  
+                  </div>
+                  <br>
+                  <button class="typeahead bg-success p-2 text-white">CheckOut</button>
+                </form>
+                </div>
+                </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        {% endblock content %}

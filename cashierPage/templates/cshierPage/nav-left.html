@@ -1,0 +1,31 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">
+          <i class="mdi mdi-grid-large menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+      
+      <li class="nav-item nav-category">PRODUCT</li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'form-page' %}">
+            <i class="menu-icon mdi mdi-card-text-outline"></i>
+            <span class="menu-title">cashier</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'add-product' %}">
+            <i class="menu-icon mdi mdi-card-text-outline"></i>
+            <span class="menu-title">add product</span>
+        </a>
+      </li>
+      
+      {% comment %} <li class="nav-item">
+        <a class="nav-link" href="{% url 'new-page' %}">
+          <i class="menu-icon mdi mdi-card-text-outline"></i>
+          <span class="menu-title">------------</span>
+        </a>
+      </li> {% endcomment %}
+    </ul>
+  </nav>
